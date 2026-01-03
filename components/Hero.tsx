@@ -47,8 +47,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
     <section className="relative pt-24 md:pt-32 pb-24 overflow-hidden z-10 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="relative z-10 animate-fade-in-up flex flex-col items-center lg:items-start text-center lg:text-left">
-          <div className="flex items-center justify-center lg:justify-start mb-8 relative group cursor-default w-full lg:w-auto">
+        <div className="relative z-10 animate-fade-in-up">
+          <div className="flex items-center mb-8 relative group cursor-default">
             <div className="z-20 bg-gradient-to-r from-[#FF9900] to-[#E88B00] text-black text-[10px] font-black px-4 py-2 rounded-full flex items-center gap-1.5 shadow-[0_0_20px_rgba(255,153,0,0.5)] relative border border-white/20 transform transition-transform group-hover:scale-105">
               <Sparkles className="w-3.5 h-3.5 fill-black animate-pulse" />
               <span className="tracking-wide">NEW</span>
@@ -70,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </span>
           </h1>
 
-          <p className="text-base md:text-xl text-gray-400 max-w-lg mb-10 leading-relaxed font-medium mx-auto lg:mx-0">
+          <p className="text-base md:text-xl text-gray-400 max-w-lg mb-10 leading-relaxed font-medium">
             Selecciono por ti el producto para que
             <span className="inline-block bg-red-600 text-white font-black text-sm md:text-base px-2 py-0.5 rounded transform -rotate-2 mx-1.5 shadow-[0_0_15px_rgba(220,38,38,0.5)] border border-red-500/50 hover:scale-105 transition-transform">
               NO pierdas tiempo
@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-14 justify-center lg:justify-start w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 mb-14">
             <button
               onClick={onOpenModal}
               className="relative group px-8 py-5 rounded-2xl font-black text-sm text-white flex items-center justify-center gap-4 shadow-2xl overflow-hidden transition-all hover:-translate-y-1 active:scale-95 hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] cursor-pointer"
