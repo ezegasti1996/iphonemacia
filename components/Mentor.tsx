@@ -28,11 +28,11 @@ const Mentor: React.FC = () => {
     return (
         <section className="py-20 relative z-10 px-6 overflow-hidden">
             <div className="container mx-auto">
-                <div className={`group bg-gradient-to-r from-[#0F1115] to-[#05070A] rounded-[40px] md:rounded-[50px] border border-white/5 p-8 md:p-12 lg:p-20 relative transition-all duration-700 ${isExpanded ? 'ring-2 ring-amazon/30 shadow-[0_0_80px_rgba(255,153,0,0.15)]' : 'hover:border-amazon/30'}`}>
+                <div className={`group bg-gradient-to-r from-[#0F1115] to-[#05070A] rounded-[40px] md:rounded-[50px] border border-white/5 p-6 md:p-12 lg:p-20 relative transition-all duration-700 ${isExpanded ? 'ring-2 ring-amazon/30 shadow-[0_0_80px_rgba(255,153,0,0.15)]' : 'hover:border-amazon/30'}`}>
 
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amazon/5 blur-[120px] rounded-full pointer-events-none transition-all duration-1000 group-hover:bg-amazon/10"></div>
 
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                         {/* Interactive Image Side */}
                         <div className="relative order-2 lg:order-1 flex justify-center lg:justify-start perspective-2000">
@@ -126,7 +126,7 @@ const Mentor: React.FC = () => {
                                 YA HA <span className="text-amazon inline-block transform hover:scale-110 transition-transform duration-300 cursor-cell underline decoration-amazon/30 decoration-4 underline-offset-4">VENDIDO.</span>
                             </h2>
 
-                            <div className="space-y-6 text-gray-300 text-lg font-medium leading-relaxed pl-6 border-l-4 border-amazon/30 text-left">
+                            <div className="space-y-6 text-gray-300 text-lg font-medium leading-relaxed pl-0 lg:pl-6 border-l-0 lg:border-l-4 border-amazon/30 text-left">
                                 <p>
                                     <span className="text-white font-bold block mb-1">Soy Emi de la Sierra.</span>
                                     Mi misión: <span className="text-white">Romper las barreras del comercio global.</span>
@@ -136,7 +136,7 @@ const Mentor: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="mt-8 lg:mt-12 flex items-center justify-start gap-6 p-6 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm">
+                            <div className="mt-8 lg:mt-12 flex items-center justify-start gap-6 p-4 lg:p-6 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm">
                                 <div className="flex flex-col">
                                     <span className="text-3xl font-black text-white">4.9/5</span>
                                     <div className="flex text-amazon text-sm space-x-0.5">
