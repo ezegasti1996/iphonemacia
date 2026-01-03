@@ -17,13 +17,13 @@ const Mentor: React.FC = () => {
                         <div className="relative order-2 lg:order-1 flex justify-center lg:justify-start perspective-2000">
                             <div
                                 onClick={() => setIsExpanded(!isExpanded)}
-                                className="relative w-full max-w-[450px] h-[450px] md:h-[550px] cursor-pointer"
+                                className="relative w-full max-w-[450px] h-[550px] md:h-[550px] cursor-pointer"
                             >
                                 {/* THE "BACK" IMAGE (The one that comes to front) */}
                                 <div
                                     className={`absolute inset-0 rounded-[30px] md:rounded-[40px] overflow-hidden border-2 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-2xl
                                     ${isExpanded
-                                            ? 'z-40 scale-105 md:scale-110 border-amazon/50 rotate-0 translate-y-0 shadow-[0_40px_100px_rgba(0,0,0,0.8)]'
+                                            ? 'z-40 scale-100 md:scale-110 border-amazon/50 rotate-0 translate-y-0 shadow-[0_40px_100px_rgba(0,0,0,0.8)]'
                                             : 'z-10 scale-100 border-white/10 rotate-0 shadow-black'
                                         }
                                 `}
@@ -44,9 +44,9 @@ const Mentor: React.FC = () => {
 
                                 {/* THE "FRONT" CARD (The one that goes to back) */}
                                 <div
-                                    className={`absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-12 lg:left-auto lg:top-auto lg:right-[-20px] lg:translate-x-0 lg:translate-y-0 z-20 bg-[#021024]/90 backdrop-blur-2xl border border-white/10 p-6 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.8)] w-[280px] text-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                                    className={`absolute bottom-4 left-1/2 -translate-x-1/2 lg:bottom-12 lg:left-auto lg:top-auto lg:right-[-20px] lg:translate-x-0 lg:translate-y-0 z-20 bg-[#021024]/90 backdrop-blur-2xl border border-white/10 p-6 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.8)] w-[280px] text-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                                     ${isExpanded
-                                            ? 'translate-y-[120%] translate-x-[20%] rotate-12 blur-[1px]'
+                                            ? 'translate-y-[140%] opacity-0 lg:opacity-100 lg:translate-y-[120%] lg:translate-x-[20%] lg:rotate-12 blur-[1px]'
                                             : 'opacity-100 scale-100 rotate-0 hover:rotate-0 hover:border-amazon hover:shadow-[0_0_40px_rgba(255,153,0,0.4)]'
                                         }
                                 `}
