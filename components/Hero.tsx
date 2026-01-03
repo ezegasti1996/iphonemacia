@@ -44,23 +44,13 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   }, [hasCounted]);
 
   return (
-    <section className="relative pt-24 md:pt-32 pb-24 overflow-hidden z-10 px-6">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="relative pt-20 lg:pt-24 pb-12 lg:pb-16 overflow-hidden z-10 px-6">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
         <div className="relative z-10 animate-fade-in-up">
-          <div className="flex items-center mb-8 relative group cursor-default">
-            <div className="z-20 bg-gradient-to-r from-[#FF9900] to-[#E88B00] text-black text-[10px] font-black px-4 py-2 rounded-full flex items-center gap-1.5 shadow-[0_0_20px_rgba(255,153,0,0.5)] relative border border-white/20 transform transition-transform group-hover:scale-105">
-              <Sparkles className="w-3.5 h-3.5 fill-black animate-pulse" />
-              <span className="tracking-wide">NEW</span>
-            </div>
-            <div className="flex items-center bg-white/5 border border-white/10 rounded-r-full -ml-3 pl-6 pr-5 py-2 overflow-hidden animate-unfold origin-left backdrop-blur-md" style={{ maxWidth: 0, opacity: 0 }}>
-              <span className="text-gray-300 text-[11px] font-black tracking-[0.25em] uppercase whitespace-nowrap min-w-max">
-                MÉTODO <span className="text-[#FF9900] text-shadow-glow">2026</span>
-              </span>
-            </div>
-          </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] mb-8 tracking-tight font-heading">
+
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading">
             APRENDE A <br />
             CREAR UNA <br />
             <span className="text-amazon">TIENDA</span> EN <br />
@@ -70,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </span>
           </h1>
 
-          <p className="text-base md:text-xl text-gray-400 max-w-lg mb-10 leading-relaxed font-medium">
+          <p className="text-base md:text-lg text-gray-400 max-w-lg mb-8 leading-relaxed font-medium">
             Selecciono por ti el producto para que
             <span className="inline-block bg-red-600 text-white font-black text-sm md:text-base px-2 py-0.5 rounded transform -rotate-2 mx-1.5 shadow-[0_0_15px_rgba(220,38,38,0.5)] border border-red-500/50 hover:scale-105 transition-transform">
               NO pierdas tiempo
@@ -81,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-14">
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <button
               onClick={onOpenModal}
               className="relative group px-8 py-5 rounded-2xl font-black text-sm text-white flex items-center justify-center gap-4 shadow-2xl overflow-hidden transition-all hover:-translate-y-1 active:scale-95 hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] cursor-pointer"
@@ -120,7 +110,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         </div>
 
         <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
-          <div className="relative w-full max-w-[450px]">
+          <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
             <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
               <img
                 src="/emi-hero.jpg"
