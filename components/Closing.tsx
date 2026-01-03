@@ -210,7 +210,7 @@ const Closing: React.FC<ClosingProps> = ({ onOpenModal }) => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] to-[#EC4899]">LISTA PARA VENDER</span>
                         </h2>
 
-                        <p className="text-gray-300 text-lg md:text-xl max-w-xl mb-8 font-medium leading-relaxed">
+                        <p className="hidden lg:block text-gray-300 text-lg md:text-xl max-w-xl mb-8 font-medium leading-relaxed">
                             <span className="text-white font-bold">La notificación que cambiará tu día.</span> Aprende a recibir estos avisos cada mañana en tu móvil mientras tomas el primer café.
                         </p>
 
@@ -258,7 +258,7 @@ const Closing: React.FC<ClosingProps> = ({ onOpenModal }) => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] opacity-100 group-hover:opacity-90 transition-opacity"></div>
                                 <span className="relative z-10 flex items-center gap-2">
                                     <PlayCircle className="w-5 h-5 fill-white/20" />
-                                    ACCESO INMEDIATO
+                                    QUIERO VENDER EN AMAZON
                                 </span>
                             </button>
                         </div>
