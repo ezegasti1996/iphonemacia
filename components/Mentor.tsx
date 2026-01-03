@@ -46,7 +46,7 @@ const Mentor: React.FC = () => {
                                 <div
                                     className={`absolute bottom-6 left-1/2 -translate-x-1/2 lg:bottom-12 lg:left-auto lg:top-auto lg:right-[-20px] lg:translate-x-0 lg:translate-y-0 z-20 bg-[#021024]/90 backdrop-blur-2xl border border-white/10 p-6 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.8)] w-[280px] text-center transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                                     ${isExpanded
-                                            ? 'opacity-0 scale-90 translate-y-10 blur-sm pointer-events-none'
+                                            ? 'translate-y-[120%] translate-x-[20%] rotate-12 blur-[1px]'
                                             : 'opacity-100 scale-100 rotate-0 hover:rotate-0 hover:border-amazon hover:shadow-[0_0_40px_rgba(255,153,0,0.4)]'
                                         }
                                 `}
@@ -64,7 +64,7 @@ const Mentor: React.FC = () => {
 
                                     <div className="space-y-1 mb-4">
                                         <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em]">TOTAL REVENUE:</p>
-                                        <p className="text-white text-5xl font-black tracking-tight leading-none">
+                                        <p className="text-white text-5xl font-black tracking-tight leading-none animate-shake-vertical inline-block">
                                             <span className="text-2xl align-top mr-1 text-amazon">+</span>$25M
                                         </p>
                                         <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-1">Verified Seller</p>
@@ -145,6 +145,14 @@ const Mentor: React.FC = () => {
             }
             .animate-fade-in {
                 animation: fade-in 0.4s ease-out forwards;
+            }
+            @keyframes shake-vertical {
+                0%, 100% { transform: translateY(0); }
+                25% { transform: translateY(-2px); }
+                75% { transform: translateY(2px); }
+            }
+            .animate-shake-vertical {
+                animation: shake-vertical 2s ease-in-out infinite;
             }
         `}</style>
         </section>
