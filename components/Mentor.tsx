@@ -92,12 +92,12 @@ const Mentor: React.FC = () => {
                                     </div>
 
                                     {/* Push Venta Line */}
-                                    <div className="mb-4 bg-gradient-to-r from-green-500/10 to-green-500/5 border border-green-500/20 rounded-xl py-2 px-3 flex items-center justify-center gap-2 animate-pulse-slow">
+                                    <div className="mb-0 lg:mb-4 bg-gradient-to-r from-green-500/10 to-green-500/5 border border-green-500/20 rounded-xl py-2 px-3 flex items-center justify-center gap-2 animate-pulse-slow">
                                         <TrendingUp className="w-3.5 h-3.5 text-green-400" />
                                         <span className="text-green-400 text-[10px] lg:text-[11px] font-black tracking-wide uppercase">Ventas hoy: <span className="text-white text-sm ml-1">{salesCount}</span></span>
                                     </div>
 
-                                    <div className="pt-3 border-t border-white/5 flex justify-between items-center">
+                                    <div className="hidden lg:flex pt-3 border-t border-white/5 justify-between items-center">
                                         <div className="text-left">
                                             <p className="text-[#FF9900] text-[10px] font-black tracking-wider uppercase">Expert</p>
                                             <p className="text-white text-xs font-bold">Emi de la Sierra</p>
@@ -123,8 +123,7 @@ const Mentor: React.FC = () => {
                         <div className={`transition-all duration-700 ${isExpanded ? 'opacity-20 blur-[2px] scale-95 lg:opacity-100 lg:blur-0 lg:scale-100' : 'opacity-100 blur-0 scale-100'}`}>
                             <h2 className="text-4xl md:text-5xl font-black font-heading mb-8 leading-tight text-left">
                                 APRENDE DE QUIEN <br />
-                                YA HA <span className="text-amazon inline-block transform hover:scale-110 transition-transform duration-300 cursor-cell underline decoration-amazon/30 decoration-4 underline-offset-4">RECORRIDO</span> <br />
-                                EL CAMINO.
+                                YA HA <span className="text-amazon inline-block transform hover:scale-110 transition-transform duration-300 cursor-cell underline decoration-amazon/30 decoration-4 underline-offset-4">VENDIDO.</span>
                             </h2>
 
                             <div className="space-y-6 text-gray-300 text-lg font-medium leading-relaxed pl-6 border-l-4 border-amazon/30 text-left">
