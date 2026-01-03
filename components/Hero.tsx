@@ -90,21 +90,27 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             </button>
           </div>
 
-          <div className="flex items-center gap-4" ref={counterRef}>
-            <div className="flex -space-x-4">
+          <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-6 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:bg-white/10 transition-colors cursor-default select-none" ref={counterRef}>
+            <div className="flex -space-x-3">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-[#05070A] bg-gray-800 overflow-hidden relative z-10 shadow-lg">
-                  <img src={`https://i.pravatar.cc/100?u=${i + 10}`} alt="Student" className="w-full h-full object-cover" />
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                  <img src={`https://i.pravatar.cc/100?u=${i + 15}`} alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
                 </div>
               ))}
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-[#05070A] bg-[#1A1D25] flex items-center justify-center relative z-0 text-[10px] font-bold text-gray-400">
-                99+
+              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
+                <span className="animate-pulse-slow">+99</span>
               </div>
             </div>
-            <div>
-              <p className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-widest border-b-2 border-amazon/40 pb-1">
-                <span className="text-white text-sm md:text-base mr-1 tabular-nums">+{studentCount}</span> ALUMNOS FACTURANDO
-              </p>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span className="text-white font-black text-lg leading-none tabular-nums tracking-tight">
+                  +{studentCount}
+                </span>
+              </div>
+              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">
+                Alumnos Facturando
+              </span>
             </div>
           </div>
         </div>
