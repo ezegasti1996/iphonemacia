@@ -54,6 +54,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading">
+            APRENDE A <br />
             CREAR UNA <br />
             <span className="text-amazon">TIENDA</span> EN <br />
             AMAZON Y <br />
