@@ -59,8 +59,12 @@ const VideoPage = () => {
 
                     {/* Header Section */}
                     <div className="text-center space-y-6 px-4">
-                        <div className="inline-block px-4 py-1.5 rounded-full border border-amazon/30 bg-amazon/10 text-amazon text-[10px] md:text-xs font-black tracking-widest mb-2 animate-badge-move">
-                            SOLO SI HAS VISTO LA CLASE
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amazon/30 bg-amazon/10 text-amazon text-[10px] md:text-xs font-black tracking-widest mb-2 animate-badge-move">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                            </span>
+                            CLASE GRATUITA 5 MINS
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-heading leading-[1.05] tracking-tight text-white">
