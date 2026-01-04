@@ -101,23 +101,29 @@ const VideoPage = () => {
                 <div className="max-w-4xl w-full space-y-8 animate-fade-in-up">
 
                     {/* Header Section */}
-                    <div className="text-center space-y-4">
-                        <div className="inline-block px-4 py-1.5 rounded-full border border-amazon/30 bg-amazon/10 text-amazon text-xs font-bold tracking-wider mb-2">
-                            PASO 2
+                    <div className="text-center space-y-6 px-4">
+                        <div className="inline-block px-4 py-1.5 rounded-full border border-amazon/30 bg-amazon/10 text-amazon text-[10px] md:text-xs font-black tracking-widest mb-2 animate-badge-move">
+                            SOLO SI HAS VISTO LA CLASE
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-black font-heading leading-tight">
-                            Mira cómo funciona <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#FF9900] to-[#EC4899]">
-                                el sistema FBA
+
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-heading leading-[1.1] tracking-tight">
+                            EL Método con el que mis alumnos consiguen <br className="hidden md:block" />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#FF9900] to-[#EC4899] animate-gradient-x">
+                                facturar 10.000 €
                             </span>
                         </h1>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                            En este breve video te explico exactamente cómo escalar tu tienda de 0 a 10k/mes utilizando la infraestructura de Amazon.
+
+                        <h2 className="text-xl md:text-2xl font-bold text-white leading-tight">
+                            en menos de 15 días desde 0
+                        </h2>
+
+                        <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-medium leading-relaxed">
+                            En solo 5 minutos entenderás como puedes estar <span className="text-white font-bold decoration-amazon underline decoration-2 underline-offset-2">vendiendo pasado mañana</span> después de ver esto.
                         </p>
                     </div>
 
                     {/* Video Container */}
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(255,153,0,0.15)] group bg-[#05070A]">
+                    <div className="relative w-full aspect-[9/16] md:aspect-video max-w-sm md:max-w-4xl mx-auto rounded-[30px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(255,153,0,0.15)] group bg-[#05070A]">
                         {/* Decorative Elements around video */}
                         <div className="absolute -inset-1 bg-gradient-to-r from-[#7C3AED] via-[#FF9900] to-[#EC4899] opacity-20 blur-lg group-hover:opacity-40 transition-opacity pointer-events-none"></div>
 
