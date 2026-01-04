@@ -106,9 +106,9 @@ const VideoPage = () => {
                             SOLO SI HAS VISTO LA CLASE
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-heading leading-[1.1] tracking-tight">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-heading leading-[1.1] tracking-tight text-white mb-4">
                             EL Método con el que mis alumnos consiguen <br className="hidden md:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#FF9900] to-[#EC4899] animate-gradient-x">
+                            <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-[#FF9900] to-[#EC4899] animate-gradient-x pb-2">
                                 facturar 10.000 €
                             </span>
                         </h1>
