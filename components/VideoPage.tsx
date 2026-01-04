@@ -109,7 +109,7 @@ const VideoPage = () => {
                                     rel="noopener noreferrer"
                                     className="inline-block bg-gradient-to-r from-[#7C3AED] to-[#EC4899] text-white font-black py-4 px-8 rounded-xl shadow-xl hover:shadow-[0_0_30px_rgba(124,58,237,0.4)] transition-all transform hover:-translate-y-1 text-lg"
                                 >
-                                    SOLICITAR MI TIENDA AHORA
+                                    PROGRAMAR LLAMADA AHORA
                                 </a>
                                 <p className="text-xs text-gray-500 mt-3 animate-pulse">
                                     ¡Solo quedan 3 plazas disponibles para este mes!
