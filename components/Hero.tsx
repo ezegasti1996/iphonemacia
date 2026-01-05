@@ -18,15 +18,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         if (entries[0].isIntersecting && !hasCounted) {
           setHasCounted(true);
 
-          const duration = 4000; // 4 seconds total
+          const duration = 8000; // 8 seconds total
           const startTime = performance.now();
 
           const animate = (currentTime: number) => {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
 
-            // Split into Fast (first 30%) and Slow (last 70%) phases
-            const threshold = 0.3;
+            // Split into Fast (first 15%) and Slow (last 85%) phases
+            const threshold = 0.15;
 
             // Student Counter Logic
             let newStudentCount;
