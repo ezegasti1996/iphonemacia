@@ -53,21 +53,21 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         <div className="relative z-10 animate-fade-in-up">
 
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading">
-            APRENDE A <br />
-            CREAR UNA <br />
-            <span className="text-amazon">TIENDA</span> EN <br />
-            AMAZON Y <br />
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading uppercase">
+            Aprende a vender y <br />
+            <span className="text-amazon">YO TE MONTO</span> <br />
+            LA TIENDA <br />
             <span className="bg-amazon text-black px-4 py-1.5 inline-block mt-2 shadow-[0_0_30px_rgba(255,153,0,0.4)] animate-badge-move origin-center">
-              VENDE EN 72H
+              LISTA EN 72H
             </span>
           </h1>
 
           <p className="text-base md:text-lg text-gray-400 max-w-lg mb-8 leading-relaxed font-medium">
-            Selecciono el producto y te armo la tienda para que
+            Selecciono el producto ganador por ti para que
             <span className="inline-block bg-red-600 text-white font-black text-sm md:text-base px-2 py-0.5 rounded transform -rotate-2 mx-1.5 shadow-[0_0_15px_rgba(220,38,38,0.5)] border border-red-500/50 hover:scale-105 transition-transform">
               NO PIERDAS TIEMPO
             </span>
+            en buscarlo y empieces a facturar rápido.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
