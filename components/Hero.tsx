@@ -18,15 +18,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         if (entries[0].isIntersecting && !hasCounted) {
           setHasCounted(true);
 
-          const duration = 8000; // 8 seconds total
+          const duration = 12000; // 12 seconds total
           const startTime = performance.now();
 
           const animate = (currentTime: number) => {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
 
-            // Split into Fast (first 15%) and Slow (last 85%) phases
-            const threshold = 0.15;
+            // Split into Fast (first 10%) and Slow (last 90%) phases
+            const threshold = 0.1;
 
             // Student Counter Logic
             let newStudentCount;
@@ -114,80 +114,93 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-6 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:bg-white/10 transition-colors cursor-default select-none" ref={counterRef}>
             <div className="flex -space-x-3">
               <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1589571894960-20bbe2815d22?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                  <img src="https://images.unsplash.com/photo-1615813967515-e1838c1c5116?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
+                  <span className="animate-pulse-slow">+99</span>
+                </div>
               </div>
-              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
-              </div>
-              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
-              </div>
-              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
-                <span className="animate-pulse-slow">+99</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span className="text-white font-black text-lg leading-none tabular-nums tracking-tight">
-                  +{studentCount}
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <span className="text-white font-black text-lg leading-none tabular-nums tracking-tight">
+                    +{studentCount}
+                  </span>
+                </div>
+                <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">
+                  Alumnos Facturando
                 </span>
               </div>
-              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">
-                Alumnos Facturando
-              </span>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
+            <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
+              {/* Soy Emiliano Label */}
+              <div className="absolute -top-16 -left-6 z-30 animate-float-slow hidden md:block">
+                <div className="relative">
+                  <span className="font-heading font-black text-2xl text-white transform -rotate-12 inline-block">
+                    SOY EMILIANO
+                  </span>
+                  <svg className="absolute -bottom-8 left-1/2 w-12 h-12 text-[#FF9900] transform -translate-x-1/2 rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M20 20 C 40 10, 60 40, 50 80" strokeLinecap="round" />
+                    <path d="M40 70 L 50 80 L 65 65" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
+                <img
+                  src="/emi-hero.jpg"
+                  alt="Mentor Emi de la Sierra"
+                  className="w-full h-full object-cover object-top transition-all duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+              </div>
+
+              <div className="absolute -bottom-8 -left-4 md:-left-12 z-20 glass p-5 rounded-[24px] w-[260px] md:w-[310px] animate-float-medium shadow-[0_0_40px_rgba(255,153,0,0.15)]">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">VENTAS SEMANALES</p>
+                    <h3 className="text-2xl md:text-3xl font-black font-heading tracking-tight tabular-nums">
+                      ${heroSales.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </h3>
+                  </div>
+                  <div className="bg-green-500/15 border border-green-500/30 text-green-400 text-[9px] px-2 py-1 rounded-lg font-black flex items-center gap-1 animate-pulse">
+                    <TrendingUp className="w-3 h-3" />
+                    +44.38%
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div className={`h-full bg-amazon shadow-[0_0_20px_rgba(255,153,0,0.6)] rounded-full transition-all duration-[2000ms] ease-out ${hasCounted ? 'w-[82%]' : 'w-0'}`}></div>
+                  </div>
+                  <div className="flex justify-between text-[10px] font-black text-gray-500 uppercase tracking-tighter">
+                    <span>MON</span>
+                    <span>WED</span>
+                    <span className="text-amazon">FRI</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute top-8 -right-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-2xl -rotate-12 shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
+                  alt="Amazon Smile"
+                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
-          <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
-            <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
-              <img
-                src="/emi-hero.jpg"
-                alt="Mentor Emi de la Sierra"
-                className="w-full h-full object-cover object-top transition-all duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-            </div>
-
-            <div className="absolute -bottom-8 -left-4 md:-left-12 z-20 glass p-5 rounded-[24px] w-[260px] md:w-[310px] animate-float-medium shadow-[0_0_40px_rgba(255,153,0,0.15)]">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">VENTAS SEMANALES</p>
-                  <h3 className="text-2xl md:text-3xl font-black font-heading tracking-tight tabular-nums">
-                    ${heroSales.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                  </h3>
-                </div>
-                <div className="bg-green-500/15 border border-green-500/30 text-green-400 text-[9px] px-2 py-1 rounded-lg font-black flex items-center gap-1 animate-pulse">
-                  <TrendingUp className="w-3 h-3" />
-                  +44.38%
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                  <div className={`h-full bg-amazon shadow-[0_0_20px_rgba(255,153,0,0.6)] rounded-full transition-all duration-[2000ms] ease-out ${hasCounted ? 'w-[82%]' : 'w-0'}`}></div>
-                </div>
-                <div className="flex justify-between text-[10px] font-black text-gray-500 uppercase tracking-tighter">
-                  <span>MON</span>
-                  <span>WED</span>
-                  <span className="text-amazon">FRI</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute top-8 -right-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-2xl -rotate-12 shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
-                alt="Amazon Smile"
-                className="w-10 h-10 md:w-14 md:h-14 object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <style>{`
+        <style>{`
         .text-shadow-glow {
             text-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
         }
