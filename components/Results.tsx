@@ -197,7 +197,7 @@ const Results: React.FC = () => {
                             {/* Metrics */}
                             <div className="mb-4">
                                 <div className="flex items-baseline gap-1">
-                                    <h3 className="text-4xl font-black text-white tracking-tight">25,55 <span className="text-lg text-gray-400">mil EUR</span></h3>
+                                    <h3 className="text-4xl font-black text-white tracking-tight">25.550 <span className="text-xl text-gray-400">EUR</span></h3>
                                 </div>
                                 <p className="text-xs text-gray-400 mt-1">dic 1, 2024 hasta hoy</p>
                             </div>
