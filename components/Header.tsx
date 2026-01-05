@@ -7,9 +7,9 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
         {/* Rebranded Logo - Refined animations */}
-        <div className="flex items-center gap-3 cursor-pointer group select-none animate-float-slow">
-          {/* Icon Container - Removed background glow/shadow */}
-          <div className="w-10 h-10 bg-gradient-to-br from-[#FF9900] to-[#E88B00] rounded-xl flex items-center justify-center transition-all duration-300 transform group-hover:rotate-3">
+        <div className="flex items-center gap-3 cursor-pointer group select-none">
+          {/* Icon Container - Animated float */}
+          <div className="w-10 h-10 bg-gradient-to-br from-[#FF9900] to-[#E88B00] rounded-xl flex items-center justify-center transition-all duration-300 transform group-hover:rotate-3 animate-float-slow">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
               alt="Logo Icon"
