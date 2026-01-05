@@ -145,21 +145,21 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
           <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
             <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
               {/* Soy Emiliano Label - Sticker Style */}
-              <div className="absolute -top-16 -left-2 md:-left-10 z-[60] animate-float-slow block text-center">
-                <div className="relative transform -rotate-6">
-                  <div className="bg-white text-black px-4 py-2 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-2 border-[#FF9900/50]">
-                    <span className="font-heading font-black text-2xl md:text-3xl tracking-tighter block leading-none">
-                      SOY EMILIANO
+              <div className="absolute top-0 -left-4 md:top-12 md:-left-24 z-[100] animate-float-slow block text-center">
+                <div className="relative transform -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                  <div className="bg-white text-black px-6 py-3 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] border-4 border-[#FF9900] relative z-20">
+                    <span className="font-heading font-black text-2xl md:text-4xl tracking-tighter block leading-none transform skew-x-[-5deg]">
+                      HOLA, <br /> SOY EMILIANO
                     </span>
                   </div>
-                  {/* Arrow pointing to head */}
-                  <svg className="absolute -bottom-10 left-1/2 w-10 h-10 md:w-14 md:h-14 text-white drop-shadow-md transform -translate-x-1/2 z-10" viewBox="0 0 100 100" fill="currentColor">
-                    <path d="M48 90 L 20 20 L 80 20 Z" />
-                  </svg>
-                  {/* Better Arrow SVG */}
-                  <svg className="absolute -bottom-12 left-8 w-16 h-16 text-[#FF9900] transform rotate-12 drop-shadow-sm filter drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M30 10 Q 60 10 50 80" />
-                    <path d="M30 60 L 50 80 L 70 60" />
+
+                  {/* Triangle Connector (Speech Bubble tail) */}
+                  <div className="absolute -bottom-3 right-8 w-6 h-6 bg-white border-b-4 border-r-4 border-[#FF9900] transform rotate-45 z-10"></div>
+
+                  {/* Hand Drawn Arrow */}
+                  <svg className="absolute -bottom-20 -right-4 w-20 h-20 md:w-24 md:h-24 text-[#FF9900] z-0 filter drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M10 10 Q 50 10 80 80" />
+                    <path d="M60 70 L 80 80 L 90 60" />
                   </svg>
                 </div>
               </div>
