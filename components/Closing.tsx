@@ -86,7 +86,7 @@ const NOTIFICATIONS: NotificationData[] = [
         message: (
             <div className="flex gap-3 items-center">
                 <div className="w-10 h-10 rounded border border-white/10 bg-white p-0.5 shrink-0 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1580913182749-da4348197793?auto=format&fit=crop&w=100&q=80" alt="Knives" className="w-full h-full object-cover rounded-sm" />
+                    <img src="https://images.unsplash.com/photo-1575510620608-8e34dc425419?auto=format&fit=crop&w=100&q=80" alt="Knives" className="w-full h-full object-cover rounded-sm" />
                 </div>
                 <div className="flex flex-col gap-0.5">
                     <span className="text-gray-200 text-xs leading-tight">Set Cuchillos Chef 🔪</span>
