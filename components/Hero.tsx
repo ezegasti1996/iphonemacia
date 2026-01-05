@@ -6,11 +6,9 @@ interface HeroProps {
   onOpenModal: () => void;
 }
 
-
-
 const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
-  const [studentCount, setStudentCount] = useState(105);
-  const [heroSales, setHeroSales] = useState(0);
+  const [studentCount, setStudentCount] = useState(345);
+  const [heroSales, setHeroSales] = useState(74454);
   const [hasCounted, setHasCounted] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null);
 
@@ -20,18 +18,45 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         if (entries[0].isIntersecting && !hasCounted) {
           setHasCounted(true);
 
-          const start = 105;
-          const end = 500;
-          const duration = 2000;
+          const duration = 4000; // 4 seconds total
           const startTime = performance.now();
 
           const animate = (currentTime: number) => {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 4);
 
-            setStudentCount(Math.floor(start + (end - start) * ease));
-            setHeroSales(Math.floor(0 + (104458 - 0) * ease));
+            // Split into Fast (first 30%) and Slow (last 70%) phases
+            const threshold = 0.3;
+
+            // Student Counter Logic
+            let newStudentCount;
+            if (progress < threshold) {
+              // Fast Phase: 345 -> 475
+              const p = progress / threshold; // 0 to 1
+              const ease = 1 - Math.pow(1 - p, 3); // Ease out cubic
+              newStudentCount = Math.floor(345 + (475 - 345) * ease);
+            } else {
+              // Slow Phase: 475 -> 500 (Approximating "suba lento" with small range)
+              const p = (progress - threshold) / (1 - threshold); // 0 to 1
+              const ease = 1 - Math.pow(1 - p, 2); // Ease out quad
+              newStudentCount = Math.floor(475 + (500 - 475) * ease);
+            }
+            setStudentCount(newStudentCount);
+
+            // Sales Counter Logic
+            let newHeroSales;
+            if (progress < threshold) {
+              // Fast Phase: 74454 -> 99998
+              const p = progress / threshold;
+              const ease = 1 - Math.pow(1 - p, 3);
+              newHeroSales = 74454 + (99998 - 74454) * ease;
+            } else {
+              // Slow Phase: 99998 -> 104458
+              const p = (progress - threshold) / (1 - threshold);
+              const ease = 1 - Math.pow(1 - p, 2);
+              newHeroSales = 99998 + (104458 - 99998) * ease;
+            }
+            setHeroSales(newHeroSales);
 
             if (progress < 1) requestAnimationFrame(animate);
           };
@@ -88,11 +113,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
           <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-6 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:bg-white/10 transition-colors cursor-default select-none" ref={counterRef}>
             <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                  <img src={`https://i.pravatar.cc/100?u=${i + 15}`} alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
-                </div>
-              ))}
+              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+              </div>
+              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+              </div>
+              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+              </div>
               <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
                 <span className="animate-pulse-slow">+99</span>
               </div>
@@ -125,7 +154,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
             <div className="absolute -bottom-8 -left-4 md:-left-12 z-20 glass p-5 rounded-[24px] w-[260px] md:w-[310px] animate-float-medium shadow-[0_0_40px_rgba(255,153,0,0.15)]">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Total Sales</p>
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">VENTAS SEMANALES</p>
                   <h3 className="text-2xl md:text-3xl font-black font-heading tracking-tight tabular-nums">
                     ${heroSales.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </h3>
