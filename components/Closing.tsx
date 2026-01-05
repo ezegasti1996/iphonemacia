@@ -70,11 +70,27 @@ const NOTIFICATIONS: NotificationData[] = [
         message: (
             <div className="flex gap-3 items-center">
                 <div className="w-10 h-10 rounded border border-white/10 bg-white p-0.5 shrink-0 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b91add1?auto=format&fit=crop&w=100&q=80" alt="Keyboard" className="w-full h-full object-cover rounded-sm" />
+                    <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=100&q=80" alt="Keyboard" className="w-full h-full object-cover rounded-sm" />
                 </div>
                 <div className="flex flex-col gap-0.5">
-                    <span className="text-gray-200 text-xs leading-tight">Teclado Mecánico RGB</span>
+                    <span className="text-gray-200 text-xs leading-tight">Teclado Mecánico RGB ⌨️</span>
                     <span className="text-[#FF9900] font-bold text-[10px]">Beneficio: +45,90 €</span>
+                </div>
+            </div>
+        )
+    },
+    {
+        title: "¡Venta realizada!",
+        time: "hace 18m",
+        type: 'sale',
+        message: (
+            <div className="flex gap-3 items-center">
+                <div className="w-10 h-10 rounded border border-white/10 bg-white p-0.5 shrink-0 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1612134443042-ad91e167acc2?auto=format&fit=crop&w=100&q=80" alt="Knives" className="w-full h-full object-cover rounded-sm" />
+                </div>
+                <div className="flex flex-col gap-0.5">
+                    <span className="text-gray-200 text-xs leading-tight">Set Cuchillos Chef 🔪</span>
+                    <span className="text-[#FF9900] font-bold text-[10px]">Beneficio: +32,50 €</span>
                 </div>
             </div>
         )
@@ -272,16 +288,7 @@ const Closing: React.FC<ClosingProps> = ({ onOpenModal }) => {
                             </button>
                         </div>
 
-                        <div className="mt-8 hidden lg:flex items-center gap-8 text-[11px] font-bold text-gray-500 uppercase tracking-widest">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-[#FF9900]" />
-                                Resultados Reales
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-4 h-4 text-[#FF9900]" />
-                                Método 2026
-                            </div>
-                        </div>
+
                     </div>
 
                     {/* DESKTOP NOTIFICATIONS AREA */}
