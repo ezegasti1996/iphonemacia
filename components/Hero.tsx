@@ -75,10 +75,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 z-10 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
 
+        {/* Column 1: Text Content */}
         <div className="relative z-10 animate-fade-in-up">
-          {/* ... content ... */}
-
-
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading">
             APRENDE A <br />
             CREAR UNA <br />
@@ -114,111 +112,110 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
           <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-6 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:bg-white/10 transition-colors cursor-default select-none" ref={counterRef}>
             <div className="flex -space-x-3">
-              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+              {[
+                "https://images.unsplash.com/photo-1542596594-649edbc13630",
+                "https://images.unsplash.com/photo-1589571894960-20bbe2815d22",
+                "https://images.unsplash.com/photo-1615813967515-e1838c1c5116"
+              ].map((url, i) => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
+                  <img src={`${url}?auto=format&fit=crop&w=100&q=80`} alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
                 </div>
-                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1589571894960-20bbe2815d22?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-gray-800 overflow-hidden relative z-10 shadow-md">
-                  <img src="https://images.unsplash.com/photo-1615813967515-e1838c1c5116?auto=format&fit=crop&w=100&q=80" alt="Student" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all" />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
-                  <span className="animate-pulse-slow">+99</span>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  <span className="text-white font-black text-lg leading-none tabular-nums tracking-tight">
-                    +{studentCount}
-                  </span>
-                </div>
-                <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">
-                  Alumnos Facturando
-                </span>
+              ))}
+              <div className="w-10 h-10 rounded-full border-2 border-[#121212] bg-amazon text-black flex items-center justify-center relative z-20 text-[10px] font-black shadow-lg">
+                <span className="animate-pulse-slow">+99</span>
               </div>
             </div>
-          </div>
-
-          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
-            <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
-              {/* Soy Emiliano Label - Sticker Style */}
-              <div className="absolute top-4 left-4 md:top-12 md:-left-16 z-50 animate-float-slow block text-center pointer-events-none">
-                <div className="relative transform -rotate-12 group-hover:rotate-0 transition-transform duration-500">
-                  <div className="bg-white text-black px-5 py-2.5 rounded-xl shadow-2xl border-4 border-[#FF9900] relative z-20">
-                    <span className="font-heading font-black text-xl md:text-3xl tracking-tighter block leading-none transform skew-x-[-5deg]">
-                      HOLA, <br /> SOY EMILIANO
-                    </span>
-                  </div>
-
-                  {/* Triangle Connector */}
-                  <div className="absolute -bottom-2 right-6 w-5 h-5 bg-white border-b-4 border-r-4 border-[#FF9900] transform rotate-45 z-10"></div>
-
-                  {/* Hand Drawn Arrow */}
-                  <svg className="absolute -bottom-16 -right-6 w-16 h-16 md:w-24 md:h-24 text-[#FF9900] z-0 filter drop-shadow-md" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M10 10 Q 50 10 80 80" />
-                    <path d="M60 70 L 80 80 L 90 60" />
-                  </svg>
-                </div>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span className="text-white font-black text-lg leading-none tabular-nums tracking-tight">
+                  +{studentCount}
+                </span>
               </div>
-              <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[4/5]">
-                <img
-                  src="/emi-hero.jpg"
-                  alt="Mentor Emi de la Sierra"
-                  className="w-full h-full object-cover object-top transition-all duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
-              </div>
-
-              <div className="absolute -bottom-8 -left-4 md:-left-12 z-20 glass p-5 rounded-[24px] w-[260px] md:w-[310px] animate-float-medium shadow-[0_0_40px_rgba(255,153,0,0.15)]">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">VENTAS SEMANALES</p>
-                    <h3 className="text-2xl md:text-3xl font-black font-heading tracking-tight tabular-nums">
-                      ${heroSales.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                    </h3>
-                  </div>
-                  <div className="bg-green-500/15 border border-green-500/30 text-green-400 text-[9px] px-2 py-1 rounded-lg font-black flex items-center gap-1 animate-pulse">
-                    <TrendingUp className="w-3 h-3" />
-                    +44.38%
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className={`h-full bg-amazon shadow-[0_0_20px_rgba(255,153,0,0.6)] rounded-full transition-all duration-[2000ms] ease-out ${hasCounted ? 'w-[82%]' : 'w-0'}`}></div>
-                  </div>
-                  <div className="flex justify-between text-[10px] font-black text-gray-500 uppercase tracking-tighter">
-                    <span>MON</span>
-                    <span>WED</span>
-                    <span className="text-amazon">FRI</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute top-8 -right-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-2xl -rotate-12 shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
-                  alt="Amazon Smile"
-                  className="w-10 h-10 md:w-14 md:h-14 object-contain"
-                />
-              </div>
+              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">
+                Alumnos Facturando
+              </span>
             </div>
           </div>
         </div>
 
-        <style>{`
-        .text-shadow-glow {
-            text-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
-        }
+        {/* Column 2: Visual Elements */}
+        <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
+          <div className="relative w-full max-w-[380px] lg:max-w-[420px] group">
+
+            {/* Label "HOLA, SOY EMILIANO" - Superimposed for guaranteed visibility */}
+            <div className="absolute -top-12 -left-4 md:-top-16 md:-left-20 z-[60] animate-float-slow pointer-events-none">
+              <div className="relative transform -rotate-12">
+                <div className="bg-white text-black px-5 py-3 rounded-2xl shadow-2xl border-4 border-[#FF9900] relative z-20 whitespace-nowrap">
+                  <span className="font-heading font-black text-xl md:text-3xl tracking-tighter block leading-none transform skew-x-[-5deg]">
+                    HOLA, <br /> SOY EMILIANO
+                  </span>
+                </div>
+                {/* Speech Bubble Tail */}
+                <div className="absolute -bottom-2 right-8 w-6 h-6 bg-white border-b-4 border-r-4 border-[#FF9900] transform rotate-45 z-10"></div>
+                {/* Arrow pointing to image center */}
+                <svg className="absolute -bottom-16 -right-4 w-20 h-20 md:w-24 md:h-24 text-[#FF9900] z-0 filter drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10 10 Q 40 10 70 70" />
+                  <path d="M50 60 L 70 70 L 80 50" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Main Mentor Image */}
+            <div className="relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[4/5] bg-[#0A0A0A]">
+              <img
+                src="/emi-hero.jpg"
+                alt="Mentor Emi de la Sierra"
+                className="w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            </div>
+
+            {/* Weekly Sales Card */}
+            <div className="absolute -bottom-8 -left-4 md:-left-12 z-20 glass p-5 rounded-[24px] w-[260px] md:w-[310px] animate-float-medium shadow-[0_0_40px_rgba(255,153,0,0.15)]">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">VENTAS SEMANALES</p>
+                  <h3 className="text-2xl md:text-3xl font-black font-heading tracking-tight tabular-nums text-white">
+                    ${heroSales.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </h3>
+                </div>
+                <div className="bg-green-500/15 border border-green-500/30 text-green-400 text-[9px] px-2 py-1 rounded-lg font-black flex items-center gap-1 animate-pulse">
+                  <TrendingUp className="w-3 h-3" />
+                  +44.38%
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <div className={`h-full bg-amazon shadow-[0_0_20px_rgba(255,153,0,0.6)] rounded-full transition-all duration-[2000ms] ease-out ${hasCounted ? 'w-[82%]' : 'w-0'}`}></div>
+                </div>
+                <div className="flex justify-between text-[10px] font-black text-gray-500 uppercase tracking-tighter">
+                  <span>MON</span>
+                  <span>WED</span>
+                  <span className="text-amazon">FRI</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Amazon Icon */}
+            <div className="absolute top-8 -right-4 z-20 bg-white/95 backdrop-blur-sm p-3 rounded-2xl -rotate-12 shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/20 flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg"
+                alt="Amazon"
+                className="w-10 h-10 md:w-14 md:h-14 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .text-shadow-glow { text-shadow: 0 0 10px rgba(255, 153, 0, 0.5); }
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
         }
-        .animate-float-slow {
-          animation: float 4s ease-in-out infinite;
-        }
+        .animate-float-slow { animation: float 4s ease-in-out infinite; }
       `}</style>
     </section>
   );
