@@ -72,10 +72,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   }, [hasCounted]);
 
   return (
-    <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden z-10 px-6">
+    <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 z-10 px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
 
         <div className="relative z-10 animate-fade-in-up">
+          {/* ... content ... */}
 
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight font-heading">
@@ -143,15 +144,22 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
           <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0 z-10">
             <div className="relative w-full max-w-[380px] lg:max-w-[420px]">
-              {/* Soy Emiliano Label */}
-              <div className="absolute top-6 left-6 z-50 animate-float-slow pointer-events-none">
-                <div className="relative transform -rotate-12 bg-black/20 backdrop-blur-md p-2 rounded-xl border border-white/10 shadow-xl">
-                  <span className="font-heading font-black text-2xl md:text-3xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] tracking-tighter">
-                    SOY EMILIANO
-                  </span>
-                  <svg className="absolute -bottom-10 left-8 w-10 h-10 md:w-12 md:h-12 text-[#FF9900] transform rotate-12 drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="4">
-                    <path d="M20 20 C 40 10, 60 40, 50 80" strokeLinecap="round" />
-                    <path d="M40 70 L 50 80 L 65 65" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Soy Emiliano Label - Sticker Style */}
+              <div className="absolute -top-16 -left-2 md:-left-10 z-[60] animate-float-slow block text-center">
+                <div className="relative transform -rotate-6">
+                  <div className="bg-white text-black px-4 py-2 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-2 border-[#FF9900/50]">
+                    <span className="font-heading font-black text-2xl md:text-3xl tracking-tighter block leading-none">
+                      SOY EMILIANO
+                    </span>
+                  </div>
+                  {/* Arrow pointing to head */}
+                  <svg className="absolute -bottom-10 left-1/2 w-10 h-10 md:w-14 md:h-14 text-white drop-shadow-md transform -translate-x-1/2 z-10" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M48 90 L 20 20 L 80 20 Z" />
+                  </svg>
+                  {/* Better Arrow SVG */}
+                  <svg className="absolute -bottom-12 left-8 w-16 h-16 text-[#FF9900] transform rotate-12 drop-shadow-sm filter drop-shadow-lg" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M30 10 Q 60 10 50 80" />
+                    <path d="M30 60 L 50 80 L 70 60" />
                   </svg>
                 </div>
               </div>
