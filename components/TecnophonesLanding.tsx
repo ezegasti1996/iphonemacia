@@ -215,28 +215,63 @@ export default function TecnophonesLanding({ onOpenModal }) {
             </Section>
 
             {/* Location Section */}
-            <section className="py-20 relative overflow-hidden">
+            <section id="contacto" className="py-20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1496449903678-68ddcb1d99b4?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
 
-                <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <FadeIn>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-12 font-serif">Visítanos en Maciá</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-12 font-serif text-center">Visítanos en Maciá</h2>
                     </FadeIn>
 
-                    <GlassCard className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 text-left bg-black/40">
-                        <div className="p-4 bg-white/10 rounded-full">
-                            <MapPin className="w-8 h-8 text-brand-purple" />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div className="space-y-8">
+                            <GlassCard className="bg-black/40">
+                                <div className="flex flex-col md:flex-row items-center gap-8 text-left">
+                                    <div className="p-4 bg-brand-purple/20 rounded-full">
+                                        <MapPin className="w-8 h-8 text-brand-purple" />
+                                    </div>
+                                    <div className="flex-1 space-y-2">
+                                        <h3 className="text-2xl font-bold">Oficina Comercial</h3>
+                                        <p className="text-gray-300 text-lg">Magnasco 105 | MACIA - VILLAGUAY / E. RÍOS</p>
+                                        <p className="text-brand-accent text-sm font-medium">Lunes a Sábado: 9:00 - 13:00 / 17:00 - 21:00</p>
+                                    </div>
+                                </div>
+                            </GlassCard>
+
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a
+                                    href="https://maps.app.goo.gl/U6q2NBsws4zL9Q7t7"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 px-8 py-4 bg-white text-black rounded-2xl font-bold hover:bg-gray-200 transition-all text-center flex items-center justify-center gap-2 group"
+                                >
+                                    ¿Cómo llegar?
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </a>
+                                <button className="flex-1 px-8 py-4 glass text-white rounded-2xl font-bold hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2">
+                                    <Phone className="w-5 h-5" />
+                                    WhatsApp
+                                </button>
+                            </div>
                         </div>
-                        <div className="flex-1 space-y-2">
-                            <h3 className="text-2xl font-bold">Oficina Comercial</h3>
-                            <p className="text-gray-300 text-lg">Magnasco 105 | MACIA - VILLAGUAY / E. RÍOS</p>
-                            <p className="text-brand-accent text-sm font-medium">Lunes a Sábado: 9:00 - 13:00 / 17:00 - 21:00</p>
-                        </div>
-                        <button className="px-6 py-3 bg-white text-black rounded-xl font-bold hover:bg-gray-200 transition-colors">
-                            Ver Mapa
-                        </button>
-                    </GlassCard>
+
+                        <FadeIn delay={0.2}>
+                            <div className="h-[450px] w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.130483450403!2d-59.400896259139174!3d-32.17375593338221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b169439ddc1151%3A0xc09f29e0ea491f28!2sMagnasco%20105%2C%20E3177%20Macia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1767812299375!5m2!1ses-419!2sar"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Tecnophones Maciá Location"
+                                    className="grayscale contrast-125 opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                                ></iframe>
+                            </div>
+                        </FadeIn>
+                    </div>
                 </div>
             </section>
 
