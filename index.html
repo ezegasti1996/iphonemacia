@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <script>
     tailwind.config = {
@@ -22,14 +22,25 @@
               gray: '#121212',
               accent: '#2997FF', // Apple Blue
               purple: '#BF5AF2', // Apple Purple
+              gold: '#D4AF37',   // Premium Gold
             },
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             serif: ['Playfair Display', 'serif'],
+            handwriting: ['Dancing Script', 'cursive'],
           },
           backgroundImage: {
             'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          },
+          animation: {
+            'subtle-zoom': 'subtle-zoom 20s infinite alternate',
+          },
+          keyframes: {
+            'subtle-zoom': {
+              '0%': { transform: 'scale(1)' },
+              '100%': { transform: 'scale(1.1)' }
+            }
           }
         },
       },
